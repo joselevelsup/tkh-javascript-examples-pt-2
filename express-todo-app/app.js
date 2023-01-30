@@ -3,14 +3,17 @@ import { Low } from "lowdb"; //Import the LowDB module. Uses a JSON file to crea
 import { JSONFile } from "lowdb/node";
 
 (async function () {
-  // Configure lowdb to write to JSONFile
+  // Configure lowdb to write to JSONFile. This will be our "database"
   const adapter = new JSONFile("db.json");
   const db = new Low(adapter);
 
+  //Reads the database
   await db.read();
 
+  //Checks if there is any data in the database. If not, we give default data.
   db.data = db.data || { todos: [] };
 
+  //This writes to the database if there are any changes
   await db.write();
 
   //Instantiate our express application

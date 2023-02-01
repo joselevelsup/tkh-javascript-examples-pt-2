@@ -1,7 +1,20 @@
 {
   "todos": [
     {
-      "name": "Clean dishes"
+      "id": "m_bu",
+      "name": "Bathe the dog"
+    },
+    {
+      "id": "uqx1",
+      "name": "Walk the dog"
+    },
+    {
+      "id": "2kJT",
+      "name": "Pick up groceries"
+    },
+    {
+      "id": "LkDy",
+      "name": "Order Chinese Food"
     }
   ]
 }
